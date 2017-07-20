@@ -40,6 +40,9 @@ AD<double> f0 = coeffs[0] + coeffs[1] * x0 + coeffs[2] * CppAD::pow(x0,2) + coef
 AD<double> psides0 = CppAD::atan(coeffs[1] + 2 * coeffs[2] * x0 + 3 * coeffs[3] * CppAD::pow(x0,2));
 ```
 
+## How it performs
+The car drives smoothly around the track with a ref velocity of 50mph. I can't make it any faster due to my limitations above sadly. Would be great to know how I can fix it.
+
 ## Future Thoughts
 The MPC controller works though not as well as I would've hoped. There are some issues which I would like to address:
 
