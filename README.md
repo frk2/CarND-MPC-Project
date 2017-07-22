@@ -14,6 +14,9 @@ v += acc * latency;
 ```
 Psi is subtracted since steering angles are inverted from the simulator.
 
+## Parameters
+N = 10 and delta = 0.1 - I tried with N = 20, delta = 0.1 but that predicts too far into the future and you end up getting funky solutions. N = 20, delta = 0.05 works ok but we gain little over  0.1 - N = 10, delta=0.15 also works but the car takes a little longer to stablize. Seems like anything in that range where N*dt = 1s would work.
+
 ## Cost function
 Nothing spectacular here, except I penalize high steer and acc values to make the car go smooth.
 
